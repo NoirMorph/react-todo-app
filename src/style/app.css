@@ -1,0 +1,497 @@
+/* ==========================================================================
+   Fonts placement
+   ========================================================================== */
+
+@font-face {
+    font-family: "InterRegular";
+    src: url(./fonts/InterRegular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "InterBold";
+    src: url(./fonts/InterBold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "InterBlack";
+    src: url(./fonts/InterBlack.ttf) format("truetype");
+}
+
+/* ==========================================================================
+   Reset all browser style 
+   ========================================================================== */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+    --bg-white: #FEFEFB;
+    --bg-red: #F06A6D;
+    --bg-green: #54C1AD;
+    --bg-yellow: #FDBF46;
+    --bg-blue: #5B6097;
+    --bg-gray: #A3A3B9;
+    --bg-text-color: #353644;
+    --siz-xxs: 0.8rem;
+    --siz-xs: 1rem;
+    --siz-sm: 1.2rem;
+    --siz-md: 1.8rem;
+    --siz-xl: 2.4rem;
+    --siz-xxl: 3rem;
+    --font-regular: "InterRegular";
+    --font-bold: "InterBold";
+    --font-black: "InterBlack";
+}
+
+/* ==========================================================================
+   Start styling
+   ========================================================================== */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-regular);
+    font-size: 1.6rem;
+    color: var(--bg-text-color);
+    height: 100vh;
+    padding-inline: 12.5rem;
+}
+
+/* ==========================================================================
+   Helpers Class
+   ========================================================================== */
+
+.red_btn {
+    color: var(--bg-white);
+    background-color: var(--bg-red);
+}
+
+.green_btn {
+    color: var(--bg-white);
+    background-color: var(--bg-green);
+}
+
+.yellow_btn {
+    color: var(--bg-white);
+    background-color: var(--bg-yellow);
+}
+.gray_btn {
+    color: var(--bg-white);
+    background-color: var(--bg-gray);
+}
+
+.blue_btn {
+    color: var(--bg-white);
+    background-color: var(--bg-blue);
+}
+
+/* ==========================================================================
+   Golobal classes
+   ========================================================================== */
+
+.svg_icon {
+    width: var(--siz-md);
+    height: var(--siz-md);
+    margin-right: 0.5rem;
+}
+
+.title {
+    font-family: var(--font-bold);
+    font-size: var(--siz-xl);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--siz-xs);
+    border-radius: var(--siz-xxl);
+    border: none;
+    font-family: var(--font-bold);
+    cursor: pointer;
+}
+
+.button:hover {
+    transition: transform ease 92ms;
+    transform: scale(1.2);
+}
+
+.section_header {
+    margin: 6rem 0 1rem 0;
+    position: relative;
+}
+
+.section_header_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--siz-xs);
+    border-radius: var(--siz-xxl);
+    font-family: var(--font-bold);
+    width: 9.4rem;
+    height: 4rem;
+}
+
+.section_header div::after {
+    content: "";
+    width: 92%;
+    right: 0;
+    position: absolute;
+    border: 0.1rem solid var(--bg-gray);
+}
+
+/* ==========================================================================
+   Styling Container
+   ========================================================================== */
+
+.container {
+    width: 1180px;
+    margin-inline: auto;
+    height: 100%;
+    background-color: var(--bg-white);
+}
+
+/* ==========================================================================
+   Styling Header
+   ========================================================================== */
+
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--siz-xxs);
+    width: 100%;
+}
+
+.header_left {
+    gap: var(--siz-xs);
+}
+
+.header_right,
+.header_left {
+    display: flex;
+    align-items: center;
+    font-size: var(--siz-xl);
+    font-family: var(--font-bold);
+}
+
+
+
+.header_right {
+    gap: var(--siz-xxl);
+}
+
+
+/* ==========================================================================
+   Styling Todos Controler
+   ========================================================================== */
+
+.main {
+    margin-bottom: 6rem;
+
+}
+
+.todo-section {
+    display: flex;
+    margin-top: var(--siz-xs);
+}
+
+.todo_form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.todo_input {
+    width: 32rem;
+    height: 4rem;
+    border-radius: var(--siz-xxl);
+    background-color: var(--bg-white);
+    border: 0.1rem solid var(--bg-gray);
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo_input input {
+    width: 80%;
+    height: 100%;
+    border: none;
+    background-color: inherit;
+    border-radius: var(--siz-xxl);
+    padding: var(--siz-xs);
+    outline: none;
+    font-size: var(--siz-md);
+    font-family: var(--font-regular);
+}
+
+.todo_input span {
+    height: 90%;
+    margin-right: .5rem;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: inherit;
+}
+
+.todo_buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: var(--siz-xl);
+    flex: 0 0 40%;
+
+}
+
+.add_btn {
+    font-size: var(--siz-md);
+}
+
+/* ==========================================================================
+   Styling Todos box
+   ========================================================================== */
+
+.todos_table {
+    /* justify-content: center; */
+}
+
+.todo_wrapper {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+}
+
+.todos_heading_title {
+    /* display: flex;
+    align-items: center; */
+    width: 100%;
+    /* justify-content: space-evenly; */
+    margin-bottom: 1.2rem;
+
+}
+
+.todos_heading_title thead {
+    padding-inline: 2rem;
+    font-size: 1.2rem;
+}
+
+.todos_heading_title th,
+td {
+    text-align: left;
+    padding: 1rem;
+}
+
+.todos_heading_title tr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.8rem;
+}
+
+.todos_heading_title tbody tr {
+    border: 0.1rem solid var(--bg-gray);
+    border-radius: var(--siz-xxl);
+    margin-top: 2rem;
+}
+
+.todos_heading_title tr td:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.todo_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.1rem solid var(--bg-gray);
+    padding: 0.8rem;
+    border-radius: var(--siz-xxl);
+    margin-top: 2rem;
+}
+
+.todo_box:first-child {
+    margin-top: 0;
+}
+
+.todo_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 80%;
+}
+
+
+
+.todo_caption {
+    /* یعنی حداکثر 200 کاراکتر */
+    max-width: 18rem;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.todo_right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+}
+
+.table_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo_btn {
+    border: none;
+    background-color: unset;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
