@@ -17,7 +17,8 @@ This app allows you to manage your tasks with features like **Add, Update, Delet
 
 ## 📷 Screenshots
 
-> (اینجا می‌تونی بعداً اسکرین‌شات از پروژه بذاری)
+
+<img width="1440" height="819" alt="todo-react-app" src="https://github.com/user-attachments/assets/f20fe326-3d31-4c3e-85ac-da051664d222" />
 
 ---
 
