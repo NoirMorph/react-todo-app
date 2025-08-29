@@ -1,102 +1,12 @@
 import { useEffect, useState } from "react";
 import "./style/app.css";
 
-const todosData = {
-	pending: [
-		{
-			id: 998,
-			task: "Task0",
-			createdAt: "21-08-2023",
-			updatedAt: "21-08-2023",
-			status: "pending",
-		},
-		{
-			id: 992,
-			task: "Task11",
-			createdAt: "22-08-2023",
-			updatedAt: "22-08-2023",
-			status: "pending",
-		},
-		{
-			id: 987,
-			task: "Task10",
-			createdAt: "23-08-2023",
-			updatedAt: "23-08-2023",
-			status: "pending",
-		},
-		{
-			id: 981,
-			task: "Task9",
-			createdAt: "24-08-2023",
-			updatedAt: "24-08-2023",
-			status: "pending",
-		},
-	],
-
-	active: [
-		{
-			id: 975,
-			task: "Task1",
-			createdAt: "25-08-2023",
-			updatedAt: "25-08-2023",
-			status: "active",
-		},
-		{
-			id: 970,
-			task: "Task8",
-			createdAt: "26-08-2023",
-			updatedAt: "26-08-2023",
-			status: "active",
-		},
-		{
-			id: 965,
-			task: "Task7",
-			createdAt: "27-08-2023",
-			updatedAt: "27-08-2023",
-			status: "active",
-		},
-		{
-			id: 960,
-			task: "Task6",
-			createdAt: "28-08-2023",
-			updatedAt: "28-08-2023",
-			status: "active",
-		},
-	],
-
-	closed: [
-		{
-			id: 955,
-			task: "Task2",
-			createdAt: "29-08-2023",
-			updatedAt: "29-08-2023",
-			status: "closed",
-		},
-		{
-			id: 950,
-			task: "Task3",
-			createdAt: "30-08-2023",
-			updatedAt: "30-08-2023",
-			status: "closed",
-		},
-		{
-			id: 945,
-			task: "Task4",
-			createdAt: "31-08-2023",
-			updatedAt: "31-08-2023",
-			status: "closed",
-		},
-		{
-			id: 940,
-			task: "Task5",
-			createdAt: "01-09-2023",
-			updatedAt: "01-09-2023",
-			status: "closed",
-		},
-	],
-};
 export default function App() {
-	const [todos, setTodos] = useState(todosData);
+	const [todos, setTodos] = useState({
+		pending: [],
+		active: [],
+		closed: [],
+	});
 	const [updatedValue, setUpdatedValue] = useState(null);
 
 	function handleTodoAdder(todo) {
